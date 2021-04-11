@@ -2,7 +2,7 @@
 
 const postInput = document.querySelector('#postInput');
 const postListUL = document.querySelector('.postCollection')
-const message = document.querySelector('#msg');
+const msg = document.querySelector('#msg');
 const submitBtn = document.querySelector('#SubmitBtn');
 const postDelete = document.querySelector('.postDelete');
 const filterInput = document.querySelector('#filter');
