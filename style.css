@@ -1,0 +1,15 @@
+body {
+    /* background-image: url('img/LeftVeneratedKangaroo-max-1mb.gif'); */
+    background-image: url('img/Website-Frontpage-Header-02.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+  }
+
+#logo{
+    height: 100px;
+    margin-left: 25px
+}
+#postInput{
+  height: 100px;
+}
