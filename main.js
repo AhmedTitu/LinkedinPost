@@ -2,7 +2,7 @@
 
 const postInput = document.querySelector('#postInput');
 const postListUL = document.querySelector('.postCollection')
-const msg = document.querySelector('#msg');
+const msg = document.querySelector('.msg');
 const submitBtn = document.querySelector('#SubmitBtn');
 const postDelete = document.querySelector('.postDelete');
 const filterInput = document.querySelector('#filter');
@@ -45,28 +45,22 @@ function getDataFromLocalStorage() {
 //creat post/element
 function getPostData(postList){
     if(postData.length > 0){
-        message.innerHTML = '';
-        postList.forEach(postList => {
-            let li = document.createElement('li');
-            li.className = 'list-group-item postCollection-item';
-            li.id = `post-${postList.id}`;
+        msg.style.display = 'none';
+          postList.forEach(postList => {
+            let li = document.createElement('li')
+            li.className = 'list-group-item postCollection-item'
+            li.id = `post-${postList.id}`
             li.innerHTML = `
             <span>${postList.text}</span>
             <i class="far fa-trash-alt float-right ml-3 postDelete"></i>
             <i class="far fa-clock float-right">${moment().format('MMMM Do YYYY, h:mm:ss a')}</i>
-            ` 
+            `
             postListUL.appendChild(li);
-        });  
-    }else{ 
-        showMessage(' You have no post to show... ');
+        })
+    } else {
+      msg.style.display = 'block';
     }
-}
-getPostData(postData);
-
-//Handling Message
-function showMessage(message = '') {
-    msg.textContent = message;
-  }
+};
 
 
 //submit post & validation
