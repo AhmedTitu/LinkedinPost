@@ -12,16 +12,14 @@
 <body>
     <div class="container">
         <img src="img/linkedin.png" class="img-fluid" alt="Responsive image" id="logo">
-
-        
+                
         <div class="input-group mb-3">
             <textarea class="form-control mt-3" placeholder="Type your post here..." id="postInput"></textarea>
             <button type="submit" class="btn mt-3 btn-block btn-primary" id="SubmitBtn">Post submit</button>
         </div>
 
             <div class="card card-body">
-                <span id="msg"></span>
-
+                <span class="msg"><strong>You have no post to show...</strong></span>
                 <ul class="list-group postCollection">
                     <!-- <li class="list-group-item" id="postCollection-item post-0">
                         <span>Tweet Name</span>
@@ -41,11 +39,11 @@
                         <i class="far fa-edit" id="edit"></i>
                     </li> -->
                 </ul>
+                
             </div>
 
     </div>
         <script src="main.js"></script>
-        <script src="local.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 </body>
 </html>
